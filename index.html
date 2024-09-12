@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Weather App</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="d-flex" role="search" id="city-search-form">
+              <input class="form-control me-2" type="search" placeholder="Search city" id="city-input" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+              <p id="error-message" class="text-danger"></p>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <h3 class="my-4 text-center">Weather in <span id="city_name">Delhi</span></h3>
+          <p class="lead text-body-secondary text-center">Current Temperature is <span id="max_temp"></span></p>
+
+          <div class="d-flex justify-content-center">
+            <a href="#" class="btn btn-primary my-2" id="details_button">More details</a>      
+          </div>    
+        </div>
+
+        <!-- Initially hidden table -->
+        <div class="table-responsive d-none" id="details_table">
+          <table class="table text-center">
+            <tbody>
+              <tr>
+                <th scope="row" class="text-start">Humidity</th>  
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Visibility</th>
+                <td></td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th scope="row" class="text-start">Sunrise</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Sunset</th>
+                <td></td>
+              </tr> 
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      <script src="script.js"></script>
+  </body>
+</html>
